@@ -1,14 +1,20 @@
 #!/bin/bash
 sudo apt --fix-broken install 
 sudo apt update && sudo apt upgrade -y
-sudo apt install gnome-tweaks gnome-shell-extensions snapd winbind playonlinux ubuntu-restricted-extras fonts-firacode libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full
-sudo apt update && sudo apt upgrade -y
+sudo apt install gnome-tweaks gnome-shell-extensions snapd winbind playonlinux ubuntu-restricted-extras fonts-firacode 
+sudo apt --fix-broken install 
+sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
+sudo apt --fix-broken install 
+sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake
 sudo apt --fix-broken install 
 sudo apt update && sudo apt upgrade -y
-sudo snap install variety nuclear shortwave
+
+## Install snaps 
 sudo snap install variety
 sudo snap install nuclear
 sudo snap install shortwave
+
+## Update 
 sudo apt --fix-broken install 
 sudo apt update && sudo apt upgrade -y
 
