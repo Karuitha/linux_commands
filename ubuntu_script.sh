@@ -1,6 +1,7 @@
 #!/bin/bash
-sudo apt --fix-broken install 
+
 sudo apt update && sudo apt upgrade -y
+sudo apt --fix-broken install 
 sudo apt install gnome-tweaks gnome-shell-extensions snapd winbind playonlinux ubuntu-restricted-extras fonts-firacode 
 sudo apt --fix-broken install 
 sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
