@@ -1,5 +1,6 @@
 #!/bin/bash
 
+## Update and install key packages 
 sudo apt update && sudo apt upgrade -y
 sudo apt --fix-broken install 
 sudo apt install gnome-tweaks gnome-shell-extensions snapd winbind playonlinux ubuntu-restricted-extras fonts-firacode 
