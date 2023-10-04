@@ -7,7 +7,7 @@ sudo apt install gnome-tweaks gnome-shell-extensions snapd winbind playonlinux u
 sudo apt --fix-broken install 
 sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
 sudo apt --fix-broken install 
-sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch
+sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch libpoppler-cpp-dev
 sudo apt --fix-broken install 
 sudo apt update && sudo apt upgrade -y
 
