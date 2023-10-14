@@ -9,12 +9,16 @@ sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconf
 sudo apt --fix-broken install 
 sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch libpoppler-cpp-dev
 sudo apt --fix-broken install 
+sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp
 sudo apt update && sudo apt upgrade -y
 
 ## Install snaps 
 sudo snap install variety
 sudo snap install nuclear
 sudo snap install shortwave
+
+## Add flathub
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 ## Update 
 sudo apt --fix-broken install 
@@ -81,4 +85,7 @@ sudo rm -r Linux_Dynamic_Wallpapers
 echo "    |"
 echo "    '---> Deleted unneeded files!"
 echo "Now, don't forget to set your preferred dynamic wallpaper from Settings!"
+
+
+shutdown -r now 
 
