@@ -1,14 +1,22 @@
 #!/bin/bash
 
+## Message
+echo "Installing neccesary packages ............................"
+echo "Remember to update R and R Studio versions........"
+
 ## Update and install key packages 
 sudo apt update && sudo apt upgrade -y
 sudo apt --fix-broken install 
+
 sudo apt install gnome-tweaks gnome-shell-extensions snapd winbind playonlinux ubuntu-restricted-extras fonts-firacode 
 sudo apt --fix-broken install 
+
 sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
 sudo apt --fix-broken install 
+
 sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch libpoppler-cpp-dev
 sudo apt --fix-broken install 
+
 sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp
 sudo apt update && sudo apt upgrade -y
 
@@ -44,7 +52,7 @@ sudo apt install --no-install-recommends r-base r-base-dev
 ## Install R Studio 
 sudo apt update && sudo apt upgrade -y
 cd Desktop
-wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.09.0-463-amd64.deb
+wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.09.1-494-amd64.deb
 sudo dpkg -i rstudio*
 
 ## Install quarto 
@@ -85,6 +93,11 @@ sudo rm -r Linux_Dynamic_Wallpapers
 echo "    |"
 echo "    '---> Deleted unneeded files!"
 echo "Now, don't forget to set your preferred dynamic wallpaper from Settings!"
+
+
+echo "Installation complete! Thanks for your patience!"
+
+echo "We shall now restart your computer"
 
 
 shutdown -r now 

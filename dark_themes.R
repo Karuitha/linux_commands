@@ -8,8 +8,8 @@ p_load(tidyverse, tidymodels,
        skimr, GGally, naniar,
        Amelia, janitor, 
        remotes, devtools,
-       flextable, kableExtra)
-
+       flextable, kableExtra,
+       ggthemes)
 
 # Install the pseudo-package from this Github repository ----
 devtools::install_github("max-alletsee/rstudio-themes")
@@ -21,4 +21,3 @@ install_rstudio_themes(theme = "all_light")
 
 # Example 1: bulk-install all dark themes
 install_rstudio_themes(theme = "all_dark")
-
