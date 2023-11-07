@@ -18,7 +18,13 @@ sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-
 sudo apt --fix-broken install 
 
 sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp
+sudo apt-get install java-package
 sudo apt update && sudo apt upgrade -y
+
+## Install JDK
+cd ~
+wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb
+sudo dpkg -i jdk-21-linux-x64_bin.deb
 
 ## Install snaps 
 sudo snap install variety
