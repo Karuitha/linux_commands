@@ -3,13 +3,20 @@
 ## Message
 echo "Installing neccesary packages ............................"
 echo "Remember to update R and R Studio versions........"
+echo "If setting up for a different person, comment out git configs ........"
+
 
 ## Update and install key packages 
 sudo apt update && sudo apt upgrade -y
 sudo apt --fix-broken install 
 
 sudo apt install gnome-tweaks gnome-shell-extensions snapd winbind playonlinux ubuntu-restricted-extras fonts-firacode 
-sudo apt --fix-broken install 
+sudo apt --fix-broken install
+
+## Install microsoft fonts
+sudo add-apt-repository multiverse
+sudo apt update && sudo apt install ttf-mscorefonts-installer
+sudo fc-cache -f -v
 
 sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
 sudo apt --fix-broken install 
@@ -17,7 +24,7 @@ sudo apt --fix-broken install
 sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch libpoppler-cpp-dev
 sudo apt --fix-broken install 
 
-sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp
+sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp flameshot virtualbox geary
 sudo apt-get install java-package
 sudo apt update && sudo apt upgrade -y
 
@@ -25,6 +32,7 @@ sudo apt update && sudo apt upgrade -y
 cd ~
 wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb
 sudo dpkg -i jdk-21-linux-x64_bin.deb
+
 
 ## Install snaps 
 sudo snap install variety
