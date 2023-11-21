@@ -20,18 +20,23 @@ sudo fc-cache -f -v
 
 sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
 sudo apt --fix-broken install 
+sudo apt install libudunits2-dev gdal* libgdal-dev
 
 sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch libpoppler-cpp-dev
 sudo apt --fix-broken install 
 
-sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp flameshot virtualbox geary
+sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp flameshot virtualbox geary net-tools
 sudo apt-get install java-package
 sudo apt update && sudo apt upgrade -y
 
-## Install JDK
+## Install Azul JDK
+## Works better with other R packages like Tabulizer
 cd ~
-wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb
-sudo dpkg -i jdk-21-linux-x64_bin.deb
+sudo apt update && sudo apt upgrade -y
+wget https://cdn.azul.com/zulu/bin/zulu21.30.15-ca-jdk21.0.1-linux_amd64.deb
+sudo dpkg -i zulu*
+sudo rm zulu*
+cd 
 
 
 ## Install snaps 
@@ -75,6 +80,15 @@ wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-
 sudo dpkg -i quarto*
 
 sudo rm rstudio* quarto*
+
+## Install google Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo add-apt-repository "deb http://dl.google.com/linux/chrome/deb/ stable main"
+sudo apt update && sudo apt upgrade -y
+sudo apt install google-chrome-stable
+
+## Install chromium
+sudo apt install chromium-browser
 
 ## Install git
 sudo apt update && sudo apt upgrade -y
