@@ -71,7 +71,7 @@ sudo apt install --no-install-recommends r-base r-base-dev
 ## Install R Studio 
 sudo apt update && sudo apt upgrade -y
 cd Desktop
-wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.09.1-494-amd64.deb
+wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.12.0-369-amd64.deb
 sudo dpkg -i rstudio*
 
 ## Install quarto 
