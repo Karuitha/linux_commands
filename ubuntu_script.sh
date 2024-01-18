@@ -98,6 +98,12 @@ sudo apt install git
 git config --global user.name 'Karuitha'
 git config --global user.email 'diakingathia2005@gmail.com'
 
+## Install anaconda
+sudo apt install libgl1-mesa* libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+cd 
+wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+sudo bash Anaconda3-2023.09-0-Linux-x86_64.sh
+
 ## Install nice wallpapers 
 cd ~
 echo "Downloading needed files started"
