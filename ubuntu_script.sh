@@ -20,13 +20,13 @@ sudo fc-cache -f -v
 
 sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
 sudo apt --fix-broken install 
-sudo apt install libudunits2-dev gdal* libgdal-dev
+sudo apt install libudunits2-dev gdal* libgdal-dev gparted stacer shotwell
 
 sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch libpoppler-cpp-dev
 sudo apt --fix-broken install 
 
 sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp flameshot virtualbox geary net-tools
-sudo apt-get install java-package
+sudo apt-get install java-package transmission gnome-terminal chromium-browser
 sudo apt update && sudo apt upgrade -y
 
 ## Install Azul JDK
@@ -52,7 +52,7 @@ sudo apt --fix-broken install
 sudo apt update && sudo apt upgrade -y
 
 ## Install python libs 
-sudo apt install python3-numpy python3-pandas python3-matplotlib python3-seaborn python3-plotly
+sudo apt install python3-numpy python3-pandas python3-matplotlib python3-seaborn python3-plotly speedtest-cli
 
 ## Install R 
 # update indices
@@ -76,7 +76,7 @@ sudo dpkg -i rstudio*
 
 ## Install quarto 
 sudo apt update && sudo apt upgrade -y
-wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-amd64.deb
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.545/quarto-1.4.545-linux-amd64.deb
 sudo dpkg -i quarto*
 
 sudo rm rstudio* quarto*
