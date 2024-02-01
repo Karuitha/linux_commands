@@ -2,7 +2,7 @@
 
 ## Message
 echo "Installing neccesary packages ............................"
-echo "Remember to update R and R Studio versions........"
+echo "Remember to update Quarto, R and R Studio versions........"
 echo "If setting up for a different person, comment out git configs ........"
 
 
@@ -71,7 +71,7 @@ sudo apt install --no-install-recommends r-base r-base-dev
 ## Install R Studio 
 sudo apt update && sudo apt upgrade -y
 cd Desktop
-wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.12.0-369-amd64.deb
+wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.12.1-402-amd64.deb
 sudo dpkg -i rstudio*
 
 ## Install quarto 
