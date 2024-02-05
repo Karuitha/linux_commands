@@ -85,7 +85,7 @@ sudo rm rstudio* quarto*
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo add-apt-repository "deb http://dl.google.com/linux/chrome/deb/ stable main"
 sudo apt update && sudo apt upgrade -y
-sudo apt install google-chrome-stable
+sudo apt install google-chrome-stable ncal libglpk-dev libgmp-dev
 
 ## Install chromium
 sudo apt install chromium-browser
@@ -130,6 +130,8 @@ echo "Now, don't forget to set your preferred dynamic wallpaper from Settings!"
 
 
 echo "Installation complete! Thanks for your patience!"
+
+echo "Welcome to Ubuntu, John Karuitha"
 
 echo "We shall now restart your computer"
 

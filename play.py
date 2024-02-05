@@ -5,4 +5,4 @@ def multiply_numbers(*numbers):
     return product
     
 
-print(product(4, 5, 6))
+print(multiply_numbers(4,5,6,7))
