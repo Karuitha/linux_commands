@@ -15,12 +15,12 @@ sudo apt --fix-broken install
 
 ## Install microsoft fonts
 sudo add-apt-repository multiverse
-sudo apt update && sudo apt install ttf-mscorefonts-installer
+sudo apt update && sudo apt install ttf-mscorefonts-installer apt-transport-https
 sudo fc-cache -f -v
 
 sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
 sudo apt --fix-broken install 
-sudo apt install libudunits2-dev gdal* libgdal-dev gparted stacer shotwell
+sudo apt install libudunits2-dev gdal* libgdal-dev gparted stacer shotwell ca-certificates
 
 sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch libpoppler-cpp-dev
 sudo apt --fix-broken install 
@@ -38,12 +38,6 @@ sudo dpkg -i zulu*
 sudo rm zulu*
 cd 
 
-
-## Install snaps 
-sudo snap install variety
-sudo snap install nuclear
-sudo snap install shortwave
-
 ## Add flathub
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
@@ -54,19 +48,26 @@ sudo apt update && sudo apt upgrade -y
 ## Install python libs 
 sudo apt install python3-numpy python3-pandas python3-matplotlib python3-seaborn python3-plotly speedtest-cli
 
-## Install R 
-# update indices
-sudo apt update -qq
-# install two helper packages we need
-sudo apt install --no-install-recommends software-properties-common dirmngr
-# add the signing key (by Michael Rutter) for these repos
-# To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc 
-# Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9
-wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
-# add the R 4.0 repo from CRAN -- adjust 'focal' to 'groovy' or 'bionic' as needed
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+# Install R prerequisite 
+cd
+wget http://ftp.us.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_2.1.5-2+b2_amd64.deb
+sudo dpkg -i libjpeg62-turbo*
 
-sudo apt install --no-install-recommends r-base r-base-dev
+## Install R 
+# See https://www.linuxcapable.com/how-to-install-r-programming-language-on-debian-linux/
+# Snaps https://snapcraft.io/docs/installing-snap-on-debian
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install dirmngr apt-transport-https ca-certificates software-properties-common -y
+
+gpg --keyserver keyserver.ubuntu.com --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'
+gpg --armor --export '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7' | gpg --dearmor | sudo tee /usr/share/keyrings/cran.gpg > /dev/null
+
+echo "deb [signed-by=/usr/share/keyrings/cran.gpg] https://cloud.r-project.org/bin/linux/debian bookworm-cran40/" | sudo tee /etc/apt/sources.list.d/cran.list
+
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install r-base r-base-dev
 
 ## Install R Studio 
 sudo apt update && sudo apt upgrade -y
@@ -102,7 +103,9 @@ git config --global user.email 'diakingathia2005@gmail.com'
 sudo apt install libgl1-mesa* libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 cd 
 wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+sudo chmod +x Anaconda*
 sudo bash Anaconda3-2023.09-0-Linux-x86_64.sh
+
 
 ## Install nice wallpapers 
 cd ~
@@ -137,4 +140,17 @@ echo "We shall now restart your computer"
 
 
 shutdown -r now 
+
+
+## Do these after restarting the computer
+## activate anaconda 
+conda install conda
+conda install anaconda
+conda update anaconda
+
+
+## Install snaps 
+#sudo snap install variety
+#sudo snap install nuclear
+#sudo snap install shortwave
 
