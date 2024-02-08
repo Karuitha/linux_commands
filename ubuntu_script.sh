@@ -154,4 +154,7 @@ conda update anaconda
 #sudo snap install variety
 #sudo snap install nuclear
 #sudo snap install shortwave
+#sudo snap install office365webdesktop --beta
+
+## See https://www.wps.com/blog/how-to-install-and-run-microsoft-365-on-ubuntu-linux-a-comprehensive-guide
 
