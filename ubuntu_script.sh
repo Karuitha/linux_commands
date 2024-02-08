@@ -1,19 +1,19 @@
 #!/bin/bash
 
-## Message
+## Message -----
 echo "Installing neccesary packages ............................"
 echo "Remember to update Quarto, R and R Studio versions........"
 echo "If setting up for a different person, comment out git configs ........"
 
 
-## Update and install key packages 
+## Update and install key packages ----
 sudo apt update && sudo apt upgrade -y
 sudo apt --fix-broken install 
 
-sudo apt install gnome-tweaks gnome-shell-extensions snapd winbind playonlinux ubuntu-restricted-extras fonts-firacode 
+sudo apt install gnome-tweaks gnome-shell-extensions snap snapd winbind playonlinux ubuntu-restricted-extras fonts-firacode 
 sudo apt --fix-broken install
 
-## Install microsoft fonts
+## Install microsoft fonts ----
 sudo add-apt-repository multiverse
 sudo apt update && sudo apt install ttf-mscorefonts-installer apt-transport-https
 sudo fc-cache -f -v
@@ -29,8 +29,8 @@ sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp 
 sudo apt-get install java-package transmission gnome-terminal chromium-browser
 sudo apt update && sudo apt upgrade -y
 
-## Install Azul JDK
-## Works better with other R packages like Tabulizer
+## Install Azul JDK ----
+## Works better with other R packages like Tabulizer ----
 cd ~
 sudo apt update && sudo apt upgrade -y
 wget https://cdn.azul.com/zulu/bin/zulu21.30.15-ca-jdk21.0.1-linux_amd64.deb
@@ -38,17 +38,18 @@ sudo dpkg -i zulu*
 sudo rm zulu*
 cd 
 
-## Add flathub
+## Add flathub ----
+sudo apt install flatpak gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-## Update 
+## Update ----
 sudo apt --fix-broken install 
 sudo apt update && sudo apt upgrade -y
 
-## Install python libs 
+## Install python libs ----
 sudo apt install python3-numpy python3-pandas python3-matplotlib python3-seaborn python3-plotly speedtest-cli
 
-# Install R prerequisite 
+# Install R prerequisite ----
 cd
 wget http://ftp.us.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_2.1.5-2+b2_amd64.deb
 sudo dpkg -i libjpeg62-turbo*
