@@ -107,6 +107,12 @@ wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
 sudo chmod +x Anaconda*
 sudo bash Anaconda3-2023.09-0-Linux-x86_64.sh
 
+## Install hypnotix
+sudo apt update && sudo apt upgrade -y
+sudo add-apt-repository ppa:kelebek333/mint-tools
+sudo apt update && sudo apt upgrade -y
+sudo apt install hynotix
+
 
 ## Install nice wallpapers 
 cd ~
@@ -155,6 +161,5 @@ conda update anaconda
 #sudo snap install nuclear
 #sudo snap install shortwave
 #sudo snap install office365webdesktop --beta
-
 ## See https://www.wps.com/blog/how-to-install-and-run-microsoft-365-on-ubuntu-linux-a-comprehensive-guide
-
+# Nice wall papers https://www.droidmirror.com/download/1920-x-1080-hd-wallpapers-zip
