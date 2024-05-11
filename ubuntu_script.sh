@@ -39,7 +39,7 @@ sudo rm zulu*
 cd 
 
 ## Add flathub ----
-sudo apt install flatpak gnome-software-plugin-flatpak
+sudo apt install flatpak gnome-software-plugin-flatpak nala gdebi
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 ## Update ----
