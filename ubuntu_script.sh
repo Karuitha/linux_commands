@@ -78,7 +78,7 @@ sudo dpkg -i rstudio*
 
 ## Install quarto 
 sudo apt update && sudo apt upgrade -y
-wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.545/quarto-1.4.545-linux-amd64.deb
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.554/quarto-1.4.554-linux-amd64.deb
 sudo dpkg -i quarto*
 
 sudo rm rstudio* quarto*
