@@ -20,9 +20,9 @@ sudo fc-cache -f -v
 
 sudo apt install libclang-dev libssl-dev libpq5 libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev 
 sudo apt --fix-broken install 
-sudo apt install libudunits2-dev gdal* libgdal-dev gparted stacer shotwell ca-certificates
+sudo apt install libudunits2-dev gdal* libgdal-dev gparted stacer shotwell ca-certificates libv8-dev
 
-sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev texlive-full cmake jupyter neofetch libpoppler-cpp-dev
+sudo apt install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libcairo2-dev cmake jupyter neofetch libpoppler-cpp-dev
 sudo apt --fix-broken install 
 
 sudo apt install flatpak gimp vlc synaptic fonts-roboto fonts-cascadia-code tlp flameshot virtualbox geary net-tools
@@ -73,7 +73,7 @@ sudo apt install r-base r-base-dev
 ## Install R Studio 
 sudo apt update && sudo apt upgrade -y
 cd Desktop
-wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2024.04.0-735-amd64.deb
+wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2024.04.1-748-amd64.deb
 sudo dpkg -i rstudio*
 
 ## Install quarto 
@@ -154,6 +154,7 @@ shutdown -r now
 conda install conda
 conda install anaconda
 conda update anaconda
+sudo apt install texlive-full 
 
 
 ## Install snaps 
