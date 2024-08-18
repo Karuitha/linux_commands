@@ -1,1 +1,34 @@
+#!/usr/bin/bash
+
+sudo pacman -Syu
+
+yay -S gdal gcc-fortran nodejs-v8 spotify quarto-cli texlive speech-dispatcher sassc cmake udunits
+
+yay -S R rstudio-desktop-bin positron-ide-devel-bin ttf-fira-code ttf-ms-fonts spotify neofetch
+
+sudo pacman -S --needed bluez bluez-utils
+sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
+# sudo systemctl start bluetooth
+
+
+# Install conda 
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+sudo bash ./Miniforge3-Linux-x86_64.sh
+conda --version
+conda update conda
+conda install python=3.12.4
+
+# Bluetooth
+sudo pacman -S --needed bluez bluez-utils
+sudo pacman -S --needed bluez bluez-utils pulseaudio-bluetooth
+# sudo systemctl start bluetooth
+
+# Flathub 
+yay -S flatpak
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
+
+
+
 
