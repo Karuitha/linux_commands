@@ -2,7 +2,7 @@
 
 sudo pacman -Syu
 
-yay -S gdal gcc-fortran nodejs-v8 spotify quarto-cli texlive speech-dispatcher sassc cmake udunits
+yay -S gdal gcc-fortran nodejs-v8 spotify quarto-cli texlive speech-dispatcher sassc cmake udunits v8-r
 
 yay -S R rstudio-desktop-bin positron-ide-devel-bin ttf-fira-code ttf-ms-fonts spotify neofetch
 
