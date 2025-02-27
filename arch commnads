@@ -29,6 +29,10 @@ flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/fl
 
 # For gnome install extensions-manager from the store
 
+# Allow right clicking on gnome
+gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
+
+
 
 
 
